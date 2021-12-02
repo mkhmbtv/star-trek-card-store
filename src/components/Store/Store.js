@@ -1,10 +1,8 @@
 import Card from "../Card";
-import { initialCards, initialInventory } from "../../mockdata/CardData";
+import { useAppContext } from "../../context/AppContext";
 
 const Store = () => {
-  const buyCard = (cardId) => console.log(`Buy Card ${cardId} Coming Soon`);
-  const inventory = initialInventory;
-  const cards = initialCards;
+  const { cards, inventory, buyCard } = useAppContext()
 
   return (
     <div>
