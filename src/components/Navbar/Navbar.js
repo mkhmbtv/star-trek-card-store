@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { initialDecks } from "../../mockdata/CardData";
+import { useAppContext } from "../../context/AppContext";
 
 const Navbar = () => {
-    const decks = initialDecks;
-
+    const { decks } = useAppContext();
+    
     return (
         <div className="navbar">
             <div className="navbar-menu">
